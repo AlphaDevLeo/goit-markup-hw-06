@@ -669,6 +669,7 @@ input {
 	letter-spacing: 0.03em;
 	color: var(--txt-clr);
 	display: flex;
+	justify-content: center;
 }
 
 .link-clasic {
