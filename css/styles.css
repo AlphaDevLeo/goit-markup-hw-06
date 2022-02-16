@@ -558,6 +558,7 @@ input {
 }
 
 .modal-label {
+	display: block;
 	margin-bottom: 4px;
 	font-size: 12px;
 	line-height: 1.17;
