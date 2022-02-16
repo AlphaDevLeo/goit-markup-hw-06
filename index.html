@@ -59,7 +59,7 @@
 
     <div class="shift">
       <!-- Герой -->
-      <section class="section section-hero">
+      <section class="section-hero">
         <div class="container">
           <h1 class="hero-txt">Эффективные решения <br>для вашего бизнеса</h1>
           <button type="button" class="btn order-btn centered" data-modal-open>Заказать услугу</button>
@@ -67,7 +67,7 @@
       </section>
   
       <!-- Наши преимущества -->
-      <section class="section paddingless">
+      <section class="section-sub-hero">
         <div class="container">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="horisontal-orientation">
@@ -347,37 +347,66 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
 
-        <button type="button" class="close-btn centered" data-modal-close>
+        <button type="button" class="modal-close-btn centered" data-modal-close>
           <svg class="close">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
 
-        <form action="" class="modal-form">
+        <form class="modal-form" autocomplete="on">
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <p>Оставьте свои данные, мы вам перезвоним</p>
-
-          <label for="username">Имя</label>
-          <input id="username" type="text">
-
-          <label for="phone-number">Телефон</label>
-          <input id="phone-number" type="tel" min="10" max="12">
+          <div class="modal-field">
+            <label class="modal-label" for="username">Имя</label>
+            <div class="input-wrapper">
+              <input class="modal-input" id="username" name="username" type="text" required>
+              <svg class="modal-input-icon">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
+          </div>
           
-          <label for="email">Почта</label>
-          <input id="email" type="email">
+          <div class="modal-field">
+            <label class="modal-label" for="user-phone-number">Телефон</label>
+            <div class="input-wrapper">
+              <input class="modal-input" id="user-phone-number" name="user-phone-number" type="tel" value="+380111111111" required pattern="[\+]\d{12}">
+              <svg class="modal-input-icon">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="modal-field">
+            <label class="modal-label" for="user-email">Почта</label>
+            <div class="input-wrapper">
+              <input class="modal-input" id="user-email" name="user-email" type="email">
+              <svg class="modal-input-icon">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="modal-field last-field">
+            <label class="modal-label" for="user-comment">Комментарий</label>
+            <textarea class="modal-user-comment" name="user-comment" id="user-comment" placeholder="Введите текст"></textarea>
+          </div>
+<!--  -->
+          <div class="modal-field check-field">
+            <input type="checkbox" name="policy" id="policy" class="modal-check visually-hidden" />
+            <label for="policy" class="modal-check-text">
+              <span class="checkbox-manual">
+                <svg class="check-icon">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю &#32;<a href="" class="link-clasic">&#32; Условия договора</a>
+            </label>
+          </div>
 
-          <label for="comment">Комментарий</label>
-          <input id="comment" class="comment" type="text" placeholder="Введите текст">
-
-
-          <input id="checkbox" type="checkbox" name="agree" value="true" />
-          <label for="checkbox" class="agreement">
-            Соглашаюсь с рассылкой и принимаю <span class="link-clasic"><a href="">Условия договора</a></span>
-          </label>
-
-          <button type="submit" class="btn order-btn centered">
+          <button type="submit" class="btn send-btn centered">
             Отправить
           </button>
+
         </form>
         
       </div>
@@ -441,11 +470,16 @@
 
       <div class="subscribe-block">
         <h3 class="join">подпишитесь на рассылку</h3>
-        <form name="signup_form" autocomplete="on" action="" class="horisontal-orientation">
+        <form autocomplete="on" action="" class="horisontal-orientation">
           <label>
-            <input type="email" name="email" placeholder="E-mail" class="">
+            <input class="footer-input" name="user-email" type="email" placeholder="E-mail">
           </label>
-          <button type="submit" class="btn subscribe-btn centered">Подписаться</button>
+          <button type="submit" class="btn subscribe-btn centered">
+            Подписаться
+              <svg class="send-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+          </button>
         </form>
       </div>
 
